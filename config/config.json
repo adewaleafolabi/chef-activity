@@ -1,0 +1,9 @@
+{
+  "DBHost" : "127.0.0.1",
+  "DBPort" : "3306",
+  "DBName" : "cheffy",
+  "DBUser" : "root",
+  "DBPassword" : "root",
+  "GRPCPort": ":5058",
+  "TimeZone": "America/Toronto"
+}

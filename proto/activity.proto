@@ -1,0 +1,23 @@
+syntax = "proto3";
+package chefhero;
+
+service ActivityService {
+    rpc CreateActivity (ActivityRequest) returns (ActivityResponse) {}
+    rpc FindActivity(ActivityRequest) returns (stream ActivityRequest) {}
+}
+
+message ActivityRequest {
+    string id = 1;
+    string email = 2;
+    string environment = 3;
+    string component = 4;
+    string message = 5;
+    string data = 6;
+    string createdAt = 7;
+
+}
+
+message ActivityResponse {
+    string id = 1;
+    bool success = 2;
+}
