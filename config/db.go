@@ -15,6 +15,7 @@ type Configuration struct {
 	DBPassword string
 	GRPCPort   string
 	TimeZone   string
+	NSQAddress   string
 }
 
 func CreateDBConnection(c Configuration) (*gorm.DB, error) {

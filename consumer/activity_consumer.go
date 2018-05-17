@@ -47,7 +47,7 @@ func main() {
 		log.Printf("activity processed successfully. id:%s",id)
 		return nil
 	}))
-	err = q.ConnectToNSQD("127.0.0.1:4150")
+	err = q.ConnectToNSQD(configuration.NSQAddress)
 	if err != nil {
 		log.Panic("Could not connect")
 	}

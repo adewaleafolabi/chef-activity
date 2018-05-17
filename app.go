@@ -40,7 +40,7 @@ func main() {
 	}
 
 	config := nsq.NewConfig()
-	w, _ := nsq.NewProducer("127.0.0.1:4150", config)
+	w, _ := nsq.NewProducer(configuration.NSQAddress, config)
 
 	s := grpc.NewServer()
 	chefhero.RegisterActivityServiceServer(s, &service{repo: activityRepo, validator: validator.New(), producer: w})
